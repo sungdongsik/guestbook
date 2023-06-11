@@ -10,7 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Guestbook extends BaseEntity{
+public class Guestbook extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long gno;
@@ -20,4 +20,12 @@ public class Guestbook extends BaseEntity{
     private String content;
     @Column(length = 50, nullable = false)
     private String writer;
+
+    public void chageContent(String content){
+        this.content = content;
+    }
+
+    public void chageTitle(String title){
+        this.title = title;
+    }
 }
