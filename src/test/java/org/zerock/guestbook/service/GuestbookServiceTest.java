@@ -22,5 +22,9 @@ class GuestbookServiceTest {
         for(GuestbookDTO guestbookDTO : resultDTO.getDtoList()){
             System.out.println(guestbookDTO);
         }
+        //302
+        System.out.println(resultDTO);
+
+        resultDTO.getPageList().forEach(i -> System.out.println(i));
     }
 }
